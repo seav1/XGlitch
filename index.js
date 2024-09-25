@@ -39,7 +39,7 @@ const main = async () => {
     await executeCommand(`chmod +x ./${FILES[i]}`);
   }
 
-  await executeCommand(`nohup ./cf tunnel --edge-ip-version auto run --protocol http2 --C_T ${C_T} --url http://localhost:8002 >/dev/null 2>&1 &`);
+  await executeCommand(`nohup ./cf tunnel --edge-ip-version auto run --protocol http2 --token ${C_T} --url http://localhost:8002 >/dev/null 2>&1 &`);
   await executeCommand(`nohup ./nz -s ${N_S}:443 -p ${N_K} --tls >/dev/null 2>&1 &`);
   await executeCommand(`nohup ./xr >/dev/null 2>&1 &`);
 };
